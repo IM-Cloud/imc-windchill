@@ -30,5 +30,5 @@
 		</property>
 	</bean>
 	
-	<bean class="com.huawei.ic.common.RestExceptionHandler"></bean>
+	<bean class="com.huawei.imc.common.RestExceptionHandler"></bean>
 </beans>
