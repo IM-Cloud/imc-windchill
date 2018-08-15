@@ -1,0 +1,22 @@
+<table class="table table-bordered table-hover">
+    <thead>
+    <tr class="success">
+        <th class="col-sm-2" ng-bind="tableHead.prdName"></th>
+        <th class="col-sm-3" ng-bind="tableHead.modifyTime"></th>
+        <th class="col-sm-2" ng-bind="tableHead.state"></th>
+        <th class="col-sm-2" ng-bind="tableHead.upDownText"></th>
+        <th class="col-sm-2" ng-bind="tableHead.version"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="items in tableBody" class="active">
+        <th class="col-sm-2">
+            <a href="{{items.objUrl}}" target="_blank" ng-bind="items.prdName"></a>
+        </th>
+        <th class="col-sm-3" ng-bind="items.modifyTime"></th>
+        <th class="col-sm-2" ng-bind="items.state"></th>
+        <th class="col-sm-2" ng-bind="items.upDownText"></th>
+        <th class="col-sm-2" ng-bind="items.version"></th>
+    </tr>
+    </tbody>
+</table>
