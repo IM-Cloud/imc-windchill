@@ -7,7 +7,7 @@ myPDMLinkProductsModule.controller('recentlyVisitedCtrl', ['$scope', '$q', '$htt
             prdName: '名称',
             modifyTime: '上次修改时间',
             state: '状态',
-            upDownText: '上下文',
+            container: '上下文',
             version: '版本'
         };
         $scope.tableBody = [];
@@ -21,7 +21,6 @@ myPDMLinkProductsModule.controller('recentlyVisitedCtrl', ['$scope', '$q', '$htt
         });*/
 
         windchillService.getInformation().then(function (result) {
-            console.log(result);
             $scope.tableBody = result.data.data
         })
 
