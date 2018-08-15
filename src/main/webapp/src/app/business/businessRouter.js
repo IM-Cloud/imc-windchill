@@ -3,18 +3,18 @@ angular.module('windchillApp', ['ui.router'])
     .config(['$stateProvider', '$urlRouterProvider',
         function ($stateProvider, $urlRouterProvider) {
             $stateProvider
-                .state("tableOne", {
-                    url: '/tableOne',
+                .state("recentlyVisited", {
+                    url: '/recentlyVisited',
                     templateUrl: 'src/app/business/views/recentlyVisited.html',
                     controller: 'recentlyVisitedCtrl'
                 })
-                .state("tableTwo", {
-                    url: '/tableTwo',
+                .state("myPDMLinkProducts", {
+                    url: '/myPDMLinkProducts',
                     templateUrl: 'src/app/business/views/myPDMLinkProducts.html',
                     controller: 'myPDMLinkProductsCtrl'
                 });
 
-            $urlRouterProvider.otherwise('/tableOne');
+            $urlRouterProvider.otherwise('/recentlyVisited');
             window.isdev = true;
         }]);
 
