@@ -16,6 +16,8 @@
 
 	<mvc:resources location="/theme/" mapping="/theme/**" />
 	<mvc:resources location="/js/" mapping="/js/**" />
+	<mvc:resources location="/lib/" mapping="/lib/**" />
+	<mvc:resources location="/src/" mapping="/src/**" />
 	<mvc:resources location="/" mapping="*.html" />
 
 	<bean
@@ -29,6 +31,6 @@
 			</list>
 		</property>
 	</bean>
-	
+
 	<bean class="com.huawei.imc.common.RestExceptionHandler"></bean>
 </beans>
