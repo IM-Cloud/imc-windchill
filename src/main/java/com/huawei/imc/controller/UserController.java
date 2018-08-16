@@ -18,9 +18,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
- * @author Administrator
+ * @author dengshaolin
  *
  */
+@RestController
 @RequestMapping(value = "/user")
 public class UserController {
 	private static final Logger logger = Logger.getLogger(UserController.class);
@@ -43,12 +44,6 @@ public class UserController {
 		if (null == principal) {
 			logger.error("AttributePrincipal is null");
 			response.setStatus(HttpStatus.UNAUTHORIZED.value(), "invalid AttributePrincipal");
-			return null;
-		}
-		String proxyTicket = principal.getProxyTicketFor(request.getRequestURL().toString());
-		if (null == proxyTicket) {
-			logger.error("proxyTicket is null");
-			response.setStatus(HttpStatus.UNAUTHORIZED.value(), "invalid proxyTicket");
 			return null;
 		}
 		Map<String, Object> userInfo = principal.getAttributes();
