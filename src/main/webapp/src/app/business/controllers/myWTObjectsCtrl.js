@@ -1,7 +1,7 @@
 "use strict";
 var myWTObjectsModule = angular.module('windchillApp');
-myWTObjectsModule.controller('myWTObjectsCtrl', ['$scope',
-    function ($scope) {
+myWTObjectsModule.controller('myWTObjectsCtrl', ['$scope', 'userService',
+    function ($scope, userService) {
         $scope.tableHead = {
             number: '编号',
             name: '名称',
@@ -38,14 +38,41 @@ myWTObjectsModule.controller('myWTObjectsCtrl', ['$scope',
             }
 
         ];
+        // username/checkAccess/name/number/searchPart/searchDoc/indexpage
         $scope.search = {
-            number: '',
-            name: ''
+            username: '',
+            checkAccess: true,
+            indexpage: 1
         };
-        $scope.searchObject = function () {
-            console.log($scope.search);
+
+        function getUser() {
+            userService.getUserInformation().then(function (result) {
+                if (result) {
+                    $scope.search.username = result.data.name;
+                }
+            });
         }
 
+        $scope.revertSearch = function () {
+            $scope.search = {
+                username: '',
+                checkAccess: true,
+                indexpage: 1
+            };
+        }
+        $scope.searchObject = function () {
+
+        };
+        $scope.pageIndex = function (val) {
+            if (val === "pre" && $scope.search.indexpage > 1) {
+                $scope.search.indexpage--;
+            } else if (val === "next") {
+                $scope.search.indexpage++;
+            }
+        };
+        (function init() {
+            getUser();
+        })();
     }]);
 
 
