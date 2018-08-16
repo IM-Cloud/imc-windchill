@@ -1,18 +1,18 @@
 <table class="table table-bordered table-hover">
     <thead>
     <tr class="success">
-        <th class="col-sm-4" ng-bind="tableHead.prdName"></th>
-        <th class="col-sm-4" ng-bind="tableHead.prdcreator"></th>
-        <th class="col-sm-4" ng-bind="tableHead.creattime"></th>
+        <th class="col-sm-4" ng-bind="tableHead.container"></th>
+        <th class="col-sm-4" ng-bind="tableHead.creator"></th>
+        <th class="col-sm-4" ng-bind="tableHead.createtime"></th>
     </tr>
     </thead>
     <tbody>
     <tr ng-repeat="items in tableBody" class="active">
         <th class="col-sm-4">
-            <a href="{{items.objUrl}}" target="_blank" ng-bind="items.prdName"></a>
+            <a href="{{items.containerUrl}}" target="_blank" ng-bind="items.container"></a>
         </th>
-        <th class="col-sm-4" ng-bind="items.prdcreator"></th>
-        <th class="col-sm-4" ng-bind="items.creattime"></th>
+        <th class="col-sm-4" ng-bind="items.creator"></th>
+        <th class="col-sm-4" ng-bind="items.createtime"></th>
     </tr>
     </tbody>
 </table>

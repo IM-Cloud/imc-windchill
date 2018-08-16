@@ -21,7 +21,7 @@ myPDMLinkProductsModule.controller('recentlyVisitedCtrl', ['$scope', '$http', 'u
         $scope.hasUserLogin = false;
         $scope.params = {
             username: "",
-            checkAccess: false
+            checkAccess: true
         };
         userService.getUserInformation().then(function (result) {
             if (result) {

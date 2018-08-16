@@ -1,6 +1,6 @@
 var configUrl = {
     appPath: "/imc-windchill",
-    userUrl: "http://10.21.51.187"
+    userUrl: "http://100.114.238.83:8080/windchill"
 
 
 };
