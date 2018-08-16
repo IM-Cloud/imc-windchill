@@ -22,8 +22,3 @@ myPDMLinkProductsModule.controller('myPDMLinkProductsCtrl', ['$scope',
             }
         ];
     }]);
-
-
-
-
-
