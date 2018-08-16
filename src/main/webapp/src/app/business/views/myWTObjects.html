@@ -1,0 +1,54 @@
+<div ng-controller="myWTObjectsCtrl">
+    <form class="my-WT-object">
+        <div class="params-Information">
+            <label>
+                编号:<input type="text" ng-model="search.number">
+            </label>
+        </div>
+        <div class="params-Information">
+            <label>
+                名称:<input type="text" ng-model="search.name">
+            </label>
+        </div>
+        <div class="params-Information">
+            <b>类型:</b>
+            <label>
+                <input type="checkbox" value="parts" class="check-size"><span>部件</span>
+            </label>
+            <label>
+                <input type="checkbox" value="imgText" class="check-size"><span>图文档</span>
+            </label>
+        </div>
+        <div class="form-btn">
+            <button type="button" class="btn btn-primary" ng-click="searchObject()">搜索</button>
+            <button type="reset" class="btn btn-primary">重置</button>
+        </div>
+    </form>
+    <h4>搜索结果</h4>
+    <table class="table table-bordered table-hover">
+        <thead>
+        <tr class="bg-info">
+            <th class="col-sm-2" ng-bind="tableHead.number"></th>
+            <th class="col-sm-2" ng-bind="tableHead.name"></th>
+            <th class="col-sm-2" ng-bind="tableHead.modifytime"></th>
+            <th class="col-sm-2" ng-bind="tableHead.container"></th>
+            <th class="col-sm-2" ng-bind="tableHead.state"></th>
+            <th class="col-sm-2" ng-bind="tableHead.version"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="items in tableBody" class="active">
+            <th class="col-sm-2">
+                <a href="{{items.objUrl}}" target="_blank" ng-bind="items.number"></a>
+            </th>
+            <th class="col-sm-2">
+                <a href="{{items.objUrl}}" target="_blank" ng-bind="items.name"></a>
+            </th>
+            <th class="col-sm-2" ng-bind="items.modifytime"></th>
+            <th class="col-sm-2" ng-bind="items.container"></th>
+            <th class="col-sm-2" ng-bind="items.state"></th>
+            <th class="col-sm-2" ng-bind="items.version"></th>
+        </tr>
+        </tbody>
+    </table>
+</div>
