@@ -22,12 +22,22 @@ angular.module('windchillApp', ['ui.router'])
                     url: '/myCheckOut',
                     templateUrl: 'src/app/business/views/myCheckOut.html',
                     controller: 'myCheckOutCtrl'
+                })
+                .state("toDoTasks", {
+                    url: '/toDoTasks',
+                    templateUrl: 'src/app/business/views/toDoTasks.html',
+                    controller: 'toDoTasksCtrl'
+                })
+                .state("historicalTasks", {
+                    url: '/historicalTasks',
+                    templateUrl: 'src/app/business/views/historicalTasks.html',
+                    controller: 'historicalTasksCtrl'
+                })
+                .state("myUpdates", {
+                    url: '/myUpdates',
+                    templateUrl: 'src/app/business/views/myUpdates.html',
+                    controller: 'myUpdatesCtrl'
                 });
             $urlRouterProvider.otherwise('/recentlyVisited');
             window.isdev = true;
         }]);
-
-
-
-
-

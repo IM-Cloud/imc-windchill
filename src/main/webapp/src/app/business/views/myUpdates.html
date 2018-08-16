@@ -1,0 +1,24 @@
+<table class="table table-bordered table-hover" ng-controller="myUpdatesCtrl">
+    <thead>
+    <tr class="bg-info">
+        <th class="col-sm-2" ng-bind="tableHead.number"></th>
+        <th class="col-sm-3" ng-bind="tableHead.name"></th>
+        <th class="col-sm-2" ng-bind="tableHead.modifytime"></th>
+        <th class="col-sm-2" ng-bind="tableHead.container"></th>
+        <th class="col-sm-2" ng-bind="tableHead.state"></th>
+        <th class="col-sm-2" ng-bind="tableHead.version"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="items in tableBody" class="active">
+        <th class="col-sm-2">
+            <a href="{{items.objUrl}}" target="_blank" ng-bind="items.number"></a>
+        </th>
+        <th class="col-sm-3" ng-bind="items.name"></th>
+        <th class="col-sm-2" ng-bind="items.modifytime"></th>
+        <th class="col-sm-2" ng-bind="items.container"></th>
+        <th class="col-sm-2" ng-bind="items.state"></th>
+        <th class="col-sm-2" ng-bind="items.version"></th>
+    </tr>
+    </tbody>
+</table>

@@ -74,8 +74,3 @@ myWTObjectsModule.controller('myWTObjectsCtrl', ['$scope', 'userService',
             getUser();
         })();
     }]);
-
-
-
-
-

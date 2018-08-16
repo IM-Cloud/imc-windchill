@@ -58,3 +58,14 @@ body {
     text-align: center;
     width: 50px;
 }
+
+#history-cal-tasks div.footer button {
+    border: none;
+    background-color: #FFF;
+    color: #3787D0;
+}
+
+#history-cal-tasks div.footer input {
+    text-align: center;
+    width: 50px;
+}

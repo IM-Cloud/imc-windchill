@@ -1,0 +1,35 @@
+<div ng-controller="historicalTasksCtrl" id="history-cal-tasks">
+    <table class="table table-bordered table-hover">
+        <thead>
+        <tr class="bg-info">
+            <th class="col-sm-2" ng-bind="tableHead.workitemName"></th>
+            <th class="col-sm-2" ng-bind="tableHead.themeName"></th>
+            <th class="col-sm-2" ng-bind="tableHead.objectState"></th>
+            <th class="col-sm-2" ng-bind="tableHead.objectContainer"></th>
+            <th class="col-sm-2" ng-bind="tableHead.objectTime"></th>
+            <th class="col-sm-2" ng-bind="tableHead.role"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="items in tableBody" class="active">
+            <th class="col-sm-2">
+                <a href="{{items.workitemUrl}}" target="_blank" ng-bind="items.workitemName"></a>
+            </th>
+            <th class="col-sm-2">
+                <a href="{{items.objectUrl}}" target="_blank" ng-bind="items.themeName"></a>
+            </th>
+            <th class="col-sm-2" ng-bind="items.objectState"></th>
+            <th class="col-sm-2" ng-bind="items.objectContainer"></th>
+            <th class="col-sm-2" ng-bind="items.objectTime"></th>
+            <th class="col-sm-2" ng-bind="items.role"></th>
+        </tr>
+        </tbody>
+    </table>
+    <div class="footer">
+        <button ng-click="pageIndex('pre')">上一页</button>
+        <input ng-model="indexpage" type="number" min="1"
+               onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"
+               onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'0')}else{this.value=this.value.replace(/\D/g,'')}">
+        <button ng-click="pageIndex('next')">下一页</button>
+    </div>
+</div>
