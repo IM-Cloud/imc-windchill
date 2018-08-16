@@ -1,5 +1,4 @@
 "use strict";
-
 var myPDMLinkProductsModule = angular.module('windchillApp');
 myPDMLinkProductsModule.controller('myPDMLinkProductsCtrl', ['$scope',
     function ($scope) {
@@ -22,7 +21,6 @@ myPDMLinkProductsModule.controller('myPDMLinkProductsCtrl', ['$scope',
                 createtime: "2010/05/30 16:08 CST"
             }
         ];
-
     }]);
 
 

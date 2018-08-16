@@ -18,7 +18,6 @@ angular.module('windchillApp', ['ui.router'])
                     templateUrl: 'src/app/business/views/myWTObjects.html',
                     controller: 'myWTObjectsCtrl'
                 });
-
             $urlRouterProvider.otherwise('/recentlyVisited');
             window.isdev = true;
         }]);

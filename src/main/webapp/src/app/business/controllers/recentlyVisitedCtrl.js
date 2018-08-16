@@ -1,6 +1,5 @@
 "use strict";
 var myPDMLinkProductsModule = angular.module('windchillApp');
-
 myPDMLinkProductsModule.controller('recentlyVisitedCtrl', ['$scope', '$http', 'userService', 'windchillService',
     function ($scope, $http, userService, windchillService) {
         $scope.tableHead = {
@@ -11,13 +10,6 @@ myPDMLinkProductsModule.controller('recentlyVisitedCtrl', ['$scope', '$http', 'u
             version: '版本'
         };
         $scope.tableBody = [];
-        
-/*        $http.get('src/app/business/dataJson/tableOne.json').success(function (result) {
-            if (result) {
-                $scope.tableBody = result.data;
-                }
-        }).error(function (err) {});*/
-
         $scope.hasUserLogin = false;
         $scope.params = {
             username: "",
@@ -34,16 +26,4 @@ myPDMLinkProductsModule.controller('recentlyVisitedCtrl', ['$scope', '$http', 'u
                 $scope.tableBody = result.data.data
             })
         }
-
     }]);
-
-
-    
-
-
-
-
-
-
-
-
