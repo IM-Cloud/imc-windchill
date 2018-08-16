@@ -17,6 +17,11 @@ angular.module('windchillApp', ['ui.router'])
                     url: '/myWTObjects',
                     templateUrl: 'src/app/business/views/myWTObjects.html',
                     controller: 'myWTObjectsCtrl'
+                })
+                .state("myCheckOut", {
+                    url: '/myCheckOut',
+                    templateUrl: 'src/app/business/views/myCheckOut.html',
+                    controller: 'myCheckOutCtrl'
                 });
             $urlRouterProvider.otherwise('/recentlyVisited');
             window.isdev = true;

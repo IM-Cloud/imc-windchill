@@ -1,38 +1,60 @@
-form.my-WT-object {
+body {
+    padding: 0 10px;
+}
+
+#my-WT-object form {
     padding: 20px;
     font-size: 14px;
 }
 
-form.my-WT-object div.params-Information label {
+#my-WT-object form div.params-Information label {
     height: 25px;
     line-height: 25px;
     margin-bottom: 15px;
     display: inline-block;
 }
 
-form.my-WT-object div.params-Information label input {
+#my-WT-object form div.params-Information label input {
     margin-left: 20px;
 }
 
-form.my-WT-object div.params-Information label input.check-size {
+#my-WT-object form div.params-Information label input.check-size {
     zoom: 140%;
     margin: 0 0 0 10px;
     vertical-align: middle;
 }
 
-form.my-WT-object div.params-Information label span {
+#my-WT-object form div.params-Information label span {
     vertical-align: middle;
     margin-left: 5px;
 }
 
-form.my-WT-object div.params-Information b {
+#my-WT-object form div.params-Information b {
     vertical-align: middle;
 }
 
-form.my-WT-object div.form-btn {
-    margin-left: 50px;
+#my-WT-object form div.form-btn button {
+    width: 85px;
+    height: 33px;
+    border: none;
+    background-color: #0BD0D9;
 }
 
-form.my-WT-object div.form-btn button:last-child {
+#my-WT-object form div.form-btn button:last-child {
     margin-left: 22px;
+}
+
+#my-WT-object h4 {
+    font-weight: bold;
+}
+
+#my-WT-object div.footer button {
+    border: none;
+    background-color: #FFF;
+    color: #3787D0;
+}
+
+#my-WT-object div.footer input {
+    text-align: center;
+    width: 50px;
 }

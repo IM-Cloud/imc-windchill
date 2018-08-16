@@ -1,5 +1,5 @@
-<div ng-controller="myWTObjectsCtrl">
-    <form class="my-WT-object">
+<div ng-controller="myWTObjectsCtrl" id="my-WT-object">
+    <form>
         <div class="params-Information">
             <label>
                 编号:<input type="text" ng-model="search.number">
@@ -13,15 +13,15 @@
         <div class="params-Information">
             <b>类型:</b>
             <label>
-                <input type="checkbox" value="parts" class="check-size"><span>部件</span>
+                <input type="checkbox" value="searchPart" ng-model="search.searchPart" class="check-size"><span>部件</span>
             </label>
             <label>
-                <input type="checkbox" value="imgText" class="check-size"><span>图文档</span>
+                <input type="checkbox" value="searchDoc" ng-model="search.searchDoc" class="check-size"><span>图文档</span>
             </label>
         </div>
         <div class="form-btn">
-            <button type="button" class="btn btn-primary" ng-click="searchObject()">搜索</button>
-            <button type="reset" class="btn btn-primary">重置</button>
+            <button ng-click="searchObject()">搜索</button>
+            <button type="reset" ng-click="revertSearch()">重置</button>
         </div>
     </form>
     <h4>搜索结果</h4>
@@ -51,4 +51,10 @@
         </tr>
         </tbody>
     </table>
+    <div class="footer">
+        <button ng-click="pageIndex('pre')">上一页</button>
+        <input ng-model="search.indexpage" type="number" min="1" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"
+               onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'0')}else{this.value=this.value.replace(/\D/g,'')}">
+        <button ng-click="pageIndex('next')">下一页</button>
+    </div>
 </div>
