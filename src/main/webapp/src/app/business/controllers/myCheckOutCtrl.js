@@ -1,7 +1,7 @@
 "use strict";
 var myCheckOutModule = angular.module('windchillApp');
-myCheckOutModule.controller('myCheckOutCtrl', ['$scope',
-    function ($scope) {
+myCheckOutModule.controller('myCheckOutCtrl', ['$scope', 'userService',
+    function ($scope, userService) {
         $scope.tableHead = {
             number: "编号",
             name: "名称",
@@ -40,8 +40,27 @@ myCheckOutModule.controller('myCheckOutCtrl', ['$scope',
                 version: "A1"
             }
         ];
+        $scope.params = {
+            username: "",
+            checkAccess: true
+        };
+
+        function getUser() {
+            userService.getUserInformation().then(function (result) {
+                if (result && result.data && result.data.name) {
+                    $scope.params.username = result.data.name;
+                    queryList()
+                }
+            });
+        }
+
+        function queryList() {
+            windchillService.getMyCheckOut($scope.params).then(function (result) {
+                $scope.tableBody = JSON.parse(result.data).data;
+            })
+        }
 
         (function init() {
-
+            getUser();
         })();
     }]);
