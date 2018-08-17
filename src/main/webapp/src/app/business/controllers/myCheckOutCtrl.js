@@ -13,32 +13,32 @@ myCheckOutModule.controller('myCheckOutCtrl', ['$scope', 'userService', 'windchi
 
         $scope.tableBody = [
             /*     {
-                     number: "8BK1531354135",
-                     name: "XXX部件",
-                     objUrl: "http:/plmdev.unidoyun.com/Windchill/app/#ptc1/tcomp/infoPage?oid=OR:wt.pdmlink.PDMLinkProduct:142887090&u8=1",
-                     modifytime: "2808/08/13 12:13",
-                     container: "XXX产品库",
-                     state: "已发布",
-                     version: "A1"
-                 },
-                 {
-                     number: "8BK1531354135",
-                     name: "XXX部件",
-                     objUrl: "http:/plmdev.unidoyun.com/Windchill/app/#ptc1/tcomp/infoPage?oid=OR:wt.pdmlink.PDMLinkProduct:142887090&u8=1",
-                     modifytime: "2808/08/13 12:03",
-                     container: "XXX产品库",
-                     state: "已发布",
-                     version: "A1"
-                 },
-                 {
-                     number: "8BK1531354135",
-                     name: "XXX部件",
-                     objUrl: "http:/plmdev.unidoyun.com/Windchill/app/#ptc1/tcomp/infoPage?oid=OR:wt.pdmlink.PDMLinkProduct:142887090&u8=1",
-                     modifytime: "2808/08/13 12:03",
-                     container: "XXX产品库",
-                     state: "已发布",
-                     version: "A1"
-                 }*/
+                    number: "8BK1531354135",
+                    name: "XXX部件",
+                    objUrl: "http:/plmdev.unidoyun.com/Windchill/app/#ptc1/tcomp/infoPage?oid=OR:wt.pdmlink.PDMLinkProduct:142887090&u8=1",
+                    modifytime: "2808/08/13 12:13",
+                    container: "XXX产品库",
+                    state: "已发布",
+                    version: "A1"
+                },
+                {
+                    number: "8BK1531354135",
+                    name: "XXX部件",
+                    objUrl: "http:/plmdev.unidoyun.com/Windchill/app/#ptc1/tcomp/infoPage?oid=OR:wt.pdmlink.PDMLinkProduct:142887090&u8=1",
+                    modifytime: "2808/08/13 12:03",
+                    container: "XXX产品库",
+                    state: "已发布",
+                    version: "A1"
+                },
+                {
+                    number: "8BK1531354135",
+                    name: "XXX部件",
+                    objUrl: "http:/plmdev.unidoyun.com/Windchill/app/#ptc1/tcomp/infoPage?oid=OR:wt.pdmlink.PDMLinkProduct:142887090&u8=1",
+                    modifytime: "2808/08/13 12:03",
+                    container: "XXX产品库",
+                    state: "已发布",
+                    version: "A1"
+                }*/
         ];
         $scope.params = {
             username: "",
