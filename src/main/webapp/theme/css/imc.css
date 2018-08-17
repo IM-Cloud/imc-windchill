@@ -69,3 +69,9 @@ body {
     text-align: center;
     width: 50px;
 }
+#history-cal-tasks div.footer input::-webkit-outer-spin-button,input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+#history-cal-tasks div.footer input[type="number"]{
+    -moz-appearance: textfield;
+}

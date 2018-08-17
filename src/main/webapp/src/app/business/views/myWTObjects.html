@@ -2,22 +2,22 @@
     <form>
         <div class="params-Information">
             <label>
-                编号:<input type="text" ng-model="search.number">
+                编号:<input type="text" ng-model="inNumber">
             </label>
         </div>
         <div class="params-Information">
             <label>
-                名称:<input type="text" ng-model="search.name">
+                名称:<input type="text" ng-model="inName">
             </label>
         </div>
         <div class="params-Information">
             <b>类型:</b>
             <label>
-                <input type="checkbox" value="searchPart" ng-model="search.searchPart"
+                <input type="checkbox" value="searchPart" ng-model="inSearchPart"
                        class="check-size"><span>部件</span>
             </label>
             <label>
-                <input type="checkbox" value="searchDoc" ng-model="search.searchDoc" class="check-size"><span>图文档</span>
+                <input type="checkbox" value="searchDoc" ng-model="inSearchDoc" class="check-size"><span>图文档</span>
             </label>
         </div>
         <div class="form-btn">
@@ -54,9 +54,10 @@
     </table>
     <div class="footer">
         <button ng-click="pageIndex('pre')">上一页</button>
-        <input ng-model="search.indexpage" type="number" min="1"
+        <input ng-model="search.indexpage" type="number" min="0"
                onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"
                onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'0')}else{this.value=this.value.replace(/\D/g,'')}">
         <button ng-click="pageIndex('next')">下一页</button>
+        <span>共{{allPage}}页</span>
     </div>
 </div>
