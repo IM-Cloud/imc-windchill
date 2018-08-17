@@ -50,7 +50,7 @@ historicalTasksModule.controller('historicalTasksCtrl', ['$scope', 'userService'
         function getUser() {
             userService.getUserInformation().then(function (result) {
                 if (result) {
-                    $scope.search.username = result.data.name;
+                    $scope.params.username = result.data.name;
                     queryList()
                 }
             });
@@ -59,7 +59,7 @@ historicalTasksModule.controller('historicalTasksCtrl', ['$scope', 'userService'
         function queryList() {
             windchillService.getHistoricalTasks($scope.params).then(function (result) {
                 if (result && result.data) {
-                    $scope.tableBody = JSON.parse(result.data).data;
+                    $scope.tableBody = result.data.data;
                 }
             })
         }

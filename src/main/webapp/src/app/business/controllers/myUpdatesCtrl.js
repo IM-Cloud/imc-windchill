@@ -45,7 +45,7 @@ myUpdatesModule.controller('myUpdatesCtrl', ['$scope', 'userService', 'windchill
         function getUser() {
             userService.getUserInformation().then(function (result) {
                 if (result) {
-                    $scope.search.username = result.data.name;
+                    $scope.params.username = result.data.name;
                     queryList()
                 }
             });
