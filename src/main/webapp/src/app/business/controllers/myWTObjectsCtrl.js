@@ -10,33 +10,7 @@ myWTObjectsModule.controller('myWTObjectsCtrl', ['$scope', 'userService', 'windc
             state: "状态",
             version: "版本"
         };
-        $scope.tableBody = [
-            /*{
-                number: '8BK012365489',
-                name: 'XXX部件',
-                objUrl: "http:/plmdev.unidoyun.com/Windchill/app/#ptc1/tcomp/infoPage?oid=OR:wt.pdmlink.PDMLinkProduct:142887090&u8=1",
-                modifytime: "2018/8/13 12:03",
-                container: "XXX产品库",
-                state: "已发布",
-                version: "A.1"
-            }, {
-                number: '8BK012365489',
-                name: 'XXX部件',
-                objUrl: "http:/plmdev.unidoyun.com/Windchill/app/#ptc1/tcomp/infoPage?oid=OR:wt.pdmlink.PDMLinkProduct:142887090&u8=1",
-                modifytime: "2018/8/13 12:03",
-                container: "XXX产品库",
-                state: "已发布",
-                version: "A.1"
-            }, {
-                number: '8BK012365489',
-                name: 'XXX部件',
-                objUrl: "http:/plmdev.unidoyun.com/Windchill/app/#ptc1/tcomp/infoPage?oid=OR:wt.pdmlink.PDMLinkProduct:142887090&u8=1",
-                modifytime: "2018/8/13 12:03",
-                container: "XXX产品库",
-                state: "已发布",
-                version: "A.1"
-            }*/
-        ];
+        $scope.tableBody = [];
         $scope.inNumber = undefined;
         $scope.inName = undefined;
         $scope.inSearchPart = false;
@@ -76,7 +50,7 @@ myWTObjectsModule.controller('myWTObjectsCtrl', ['$scope', 'userService', 'windc
             $scope.inNumber ? $scope.search.number = $scope.inNumber : delete $scope.search.number;
             $scope.inName ? $scope.search.name = $scope.inName : delete $scope.search.name;
             $scope.inSearchPart ? $scope.search.searchPart = true : $scope.search.searchPart = false;
-            $scope.inSearchDoc ? $scope.search.searchDoc = true : $scope.search.searchPart = false;
+            $scope.inSearchDoc ? $scope.search.searchDoc = true : $scope.search.searchDoc = false;
             if (!$scope.inNumber && !$scope.inName) {
                 return;
             }

@@ -8,87 +8,94 @@ angular.module('windchillApp').service('windchillService', ['$http', function ($
     this.historicalTasksUrl = window.configData.appPath + "/windchill/historicalTasks";
     this.myUpDatesUrl = window.configData.appPath + "/windchill/myUpDates";
     this.getRecentlyList = function (params) {
+        var recentUrl = "";
         if (params) {
-            this.recentlyVisitedUrl = this.recentlyVisitedUrl + '?';
+            recentUrl = this.recentlyVisitedUrl + '?';
             for (var key in params) {
-                this.recentlyVisitedUrl = this.recentlyVisitedUrl + key + '=' + params[key] + '&';
+                recentUrl = recentUrl + key + '=' + params[key] + '&';
             }
-            if (this.recentlyVisitedUrl.lastIndexOf('&')) {
-                this.recentlyVisitedUrl = this.recentlyVisitedUrl.substring(0, this.recentlyVisitedUrl.lastIndexOf('&'))
+            if (recentUrl.lastIndexOf('&')) {
+                recentUrl = recentUrl.substring(0, recentUrl.lastIndexOf('&'))
             }
         }
-        return $http.get(this.recentlyVisitedUrl)
+        return $http.get(recentUrl)
     };
     this.getMyPDMLinkProducts = function (params) {
+        var myPDMLinkUrl = "";
         if (params) {
-            this.myPDMLinkProductsUrl = this.myPDMLinkProductsUrl + '?';
+            myPDMLinkUrl = this.myPDMLinkProductsUrl + '?';
             for (var key in params) {
-                this.myPDMLinkProductsUrl = this.myPDMLinkProductsUrl + key + '=' + params[key] + '&';
+                myPDMLinkUrl = myPDMLinkUrl + key + '=' + params[key] + '&';
             }
-            if (this.myPDMLinkProductsUrl.lastIndexOf('&')) {
-                this.myPDMLinkProductsUrl = this.myPDMLinkProductsUrl.substring(0, this.myPDMLinkProductsUrl.lastIndexOf('&'))
+            if (myPDMLinkUrl.lastIndexOf('&')) {
+                myPDMLinkUrl = myPDMLinkUrl.substring(0, myPDMLinkUrl.lastIndexOf('&'))
             }
         }
-        return $http.get(this.myPDMLinkProductsUrl)
+        return $http.get(myPDMLinkUrl)
     };
     this.getMyWTObjects = function (params) {
+        var WTOUrl = "";
         if (params) {
-            this.myWTObjectsUrl = this.myWTObjectsUrl + '?';
+            WTOUrl = this.myWTObjectsUrl + '?';
             for (var key in params) {
-                this.myWTObjectsUrl = this.myWTObjectsUrl + key + '=' + params[key] + '&';
+                WTOUrl = WTOUrl + key + '=' + params[key] + '&';
             }
-            if (this.myWTObjectsUrl.lastIndexOf('&')) {
-                this.myWTObjectsUrl = this.myWTObjectsUrl.substring(0, this.myWTObjectsUrl.lastIndexOf('&'))
+            if (WTOUrl.lastIndexOf('&')) {
+                WTOUrl = WTOUrl.substring(0, WTOUrl.lastIndexOf('&'))
             }
         }
-        return $http.get(this.myWTObjectsUrl)
+        return $http.get(WTOUrl)
     };
     this.getMyCheckOut = function (params) {
+        var myCheckUrl = "";
         if (params) {
-            this.myCheckOutUrl = this.myCheckOutUrl + '?';
+            myCheckUrl = this.myCheckOutUrl + '?';
             for (var key in params) {
-                this.myCheckOutUrl = this.myCheckOutUrl + key + '=' + params[key] + '&';
+                myCheckUrl = myCheckUrl + key + '=' + params[key] + '&';
             }
-            if (this.myCheckOutUrl.lastIndexOf('&')) {
-                this.myCheckOutUrl = this.myCheckOutUrl.substring(0, this.myCheckOutUrl.lastIndexOf('&'))
+            if (myCheckUrl.lastIndexOf('&')) {
+                myCheckUrl = myCheckUrl.substring(0, myCheckUrl.lastIndexOf('&'))
             }
         }
-        return $http.get(this.myCheckOutUrl)
+        return $http.get(myCheckUrl)
     };
     this.getToDotasks = function (params) {
+        var toDoUrl = "";
         if (params) {
-            this.toDoTasksUrl = this.toDoTasksUrl + '?';
+            toDoUrl = this.toDoTasksUrl + '?';
             for (var key in params) {
-                this.toDoTasksUrl = this.toDoTasksUrl + key + '=' + params[key] + '&';
+                toDoUrl = toDoUrl + key + '=' + params[key] + '&';
             }
-            if (this.toDoTasksUrl.lastIndexOf('&')) {
-                this.toDoTasksUrl = this.toDoTasksUrl.substring(0, this.toDoTasksUrl.lastIndexOf('&'))
+            if (toDoUrl.lastIndexOf('&')) {
+                toDoUrl = toDoUrl.substring(0, toDoUrl.lastIndexOf('&'))
             }
         }
-        return $http.get(this.toDoTasksUrl)
-    }
+        return $http.get(toDoUrl)
+    };
     this.getHistoricalTasks = function (params) {
+        var historyUrl = "";
         if (params) {
-            this.historicalTasksUrl = this.historicalTasksUrl + '?';
+            historyUrl = this.historicalTasksUrl + '?';
             for (var key in params) {
-                this.myUpDatesUrl = this.myUpDatesUrl + key + '=' + params[key] + '&';
+                historyUrl = historyUrl + key + '=' + params[key] + '&';
             }
-            if (this.historicalTasksUrl.lastIndexOf('&')) {
-                this.historicalTasksUrl = this.historicalTasksUrl.substring(0, this.historicalTasksUrl.lastIndexOf('&'))
+            if (historyUrl.lastIndexOf('&')) {
+                historyUrl = historyUrl.substring(0, historyUrl.lastIndexOf('&'))
             }
         }
-        return $http.get(this.historicalTasksUrl)
+        return $http.get(historyUrl)
     };
     this.getMyUpDates = function (params) {
+        var myUpUrl = "";
         if (params) {
-            this.myUpDatesUrl = this.myUpDatesUrl + '?';
+            myUpUrl = this.myUpDatesUrl + '?';
             for (var key in params) {
-                this.myUpDatesUrl = this.myUpDatesUrl + key + '=' + params[key] + '&';
+                myUpUrl = myUpUrl + key + '=' + params[key] + '&';
             }
-            if (this.myUpDatesUrl.lastIndexOf('&')) {
-                this.myUpDatesUrl = this.myUpDatesUrl.substring(0, this.myUpDatesUrl.lastIndexOf('&'))
+            if (myUpUrl.lastIndexOf('&')) {
+                myUpUrl = myUpUrl.substring(0, myUpUrl.lastIndexOf('&'))
             }
         }
-        return $http.get(this.myUpDatesUrl)
+        return $http.get(myUpUrl)
     }
 }]);
