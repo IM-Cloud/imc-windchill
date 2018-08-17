@@ -25,7 +25,7 @@ myPDMLinkProductsModule.controller('recentlyVisitedCtrl', ['$scope', '$http', 'u
         }
 
         function queryList() {
-            windchillService.getInformation($scope.params).then(function (result) {
+            windchillService.getRecentlyList($scope.params).then(function (result) {
                 $scope.tableBody = JSON.parse(result.data).data;
             })
         }
