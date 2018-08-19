@@ -2,6 +2,9 @@
 var toDoTasksModule = angular.module('windchillApp');
 toDoTasksModule.controller('toDoTasksCtrl', ['$scope', 'userService', 'windchillService',
     function ($scope, userService, windchillService) {
+        $scope.header = {
+            label: '我的待办'
+        };
         $scope.tableHead = {
             workitemName: "名称",
             themeName: "主题",

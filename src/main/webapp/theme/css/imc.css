@@ -1,5 +1,94 @@
 body {
-    padding: 0 10px;
+    padding: 0;
+}
+
+a {
+    color: #3399FF;
+}
+
+[class*=' imc-'], [class^=imc-] {
+    box-sizing: border-box;
+}
+
+.imc-wrapper {
+    max-width: 1920px;
+    min-width: 1280px;
+    margin: 0 auto;
+}
+
+.imc-header {
+    padding: 30px;
+    font-size: 20px;
+}
+
+.imc-content {
+    padding: 30px;
+}
+
+.imc-wrapper .imc-header {
+    padding: 30px;
+    width: 100%;
+}
+
+.imc-wrapper .imc-header, .imc-wrapper-create .imc-wizard {
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.imc-table {
+    width: 100%;
+    max-width: 100%;
+}
+table thead tr th {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    cursor: default;
+    background-color: #e1e4e5;
+    outline: 0;
+    height: 40px;
+    line-height: 40px;
+    color: #333;
+    font-weight: 400;
+    border-left: none;
+    border-right: 1px dotted transparent;
+    padding: 0;
+    padding-left: 10px!important;
+    padding-right: 10px!important;
+    text-align: left;
+    vertical-align: middle;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+table tbody tr th {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    border-left: none;
+    border-top: none;
+    border-right: 1px dotted transparent;
+    padding: 15px 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    vertical-align: middle;
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f7f8f8;
+}
+
+table tbody tr:hover {
+    background-color: #eaf6f9;
 }
 
 #my-WT-object form {

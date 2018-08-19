@@ -2,6 +2,9 @@
 var myPDMLinkProductsModule = angular.module('windchillApp');
 myPDMLinkProductsModule.controller('recentlyVisitedCtrl', ['$scope', '$http', 'userService', 'windchillService',
     function ($scope, $http, userService, windchillService) {
+        $scope.header = {
+            label: '最近访问'
+        };
         $scope.tableHead = {
             prdName: '名称',
             modifytime: '上次修改时间',

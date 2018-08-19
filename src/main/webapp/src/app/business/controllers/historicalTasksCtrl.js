@@ -2,6 +2,9 @@
 var historicalTasksModule = angular.module('windchillApp');
 historicalTasksModule.controller('historicalTasksCtrl', ['$scope', 'userService', 'windchillService',
     function ($scope, userService, windchillService) {
+        $scope.header = {
+            label: '我的已办'
+        };
         $scope.tableHead = {
             workitemName: "名称",
             themeName: "主题",

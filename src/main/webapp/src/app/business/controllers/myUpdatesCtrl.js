@@ -2,6 +2,9 @@
 var myUpdatesModule = angular.module('windchillApp');
 myUpdatesModule.controller('myUpdatesCtrl', ['$scope', 'userService', 'windchillService',
     function ($scope, userService, windchillService) {
+        $scope.header = {
+            label: '我的更新'
+        };
         $scope.tableHead = {
             number: "编号",
             name: "名称",

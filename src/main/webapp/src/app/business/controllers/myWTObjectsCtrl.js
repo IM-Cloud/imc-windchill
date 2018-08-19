@@ -2,6 +2,9 @@
 var myWTObjectsModule = angular.module('windchillApp');
 myWTObjectsModule.controller('myWTObjectsCtrl', ['$scope', 'userService', 'windchillService',
     function ($scope, userService, windchillService) {
+        $scope.header = {
+            label: '高级搜索'
+        };
         $scope.tableHead = {
             number: '编号',
             name: '名称',

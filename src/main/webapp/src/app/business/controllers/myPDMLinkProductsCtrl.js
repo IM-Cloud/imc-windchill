@@ -2,6 +2,9 @@
 var myPDMLinkProductsModule = angular.module('windchillApp');
 myPDMLinkProductsModule.controller('myPDMLinkProductsCtrl', ['$scope', 'userService', 'windchillService',
     function ($scope, userService, windchillService) {
+        $scope.header = {
+            label: '浏览产品库'
+        };
         $scope.tableHead = {
             container: '名称',
             creator: '创建人',
