@@ -13,6 +13,8 @@ historicalTasksModule.controller('historicalTasksCtrl', ['$scope', 'userService'
             objectTime: "创建时间",
             role: "角色"
         };
+        $scope.allPage = 1;
+        $scope.indexpage = 1;
         $scope.tableBody = [
             /*  {
                   workitemName: "编制",
@@ -48,7 +50,6 @@ historicalTasksModule.controller('historicalTasksCtrl', ['$scope', 'userService'
             checkAccess: true,
             indexpage: $scope.indexpage
         };
-        $scope.indexpage = 1;
 
         function getUser() {
             userService.getUserInformation().then(function (result) {
@@ -62,15 +63,16 @@ historicalTasksModule.controller('historicalTasksCtrl', ['$scope', 'userService'
         function queryList() {
             windchillService.getHistoricalTasks($scope.params).then(function (result) {
                 if (result && result.data) {
-                    $scope.tableBody = result.data.data;
+                    $scope.tableBody = JSON.parse(result.data).data;
+                    $scope.allPage = JSON.parse(result.data).data[0].totalPages;
                 }
             })
         }
 
         $scope.pageIndex = function (val) {
-            if (!$scope.params.username) {
+            /*if (!$scope.params.username) {
                 return
-            }
+            }*/
             if (val === "pre" && $scope.indexpage > 1) {
                 $scope.indexpage--;
                 queryList();
