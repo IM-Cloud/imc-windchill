@@ -29,7 +29,7 @@
                 <button type="reset" ng-click="revertSearch()">重置</button>
             </div>
         </form>
-        <h4>搜索结果</h4>
+        <p>搜索结果</p>
         <table class="imc-table">
             <thead>
             <tr class="bg-info">
@@ -56,13 +56,11 @@
             </tr>
             </tbody>
         </table>
-        <div class="footer">
-            <button ng-click="pageIndex('pre')">上一页</button>
-            <input ng-model="search.indexpage" type="number" min="0"
-                   onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"
-                   onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'0')}else{this.value=this.value.replace(/\D/g,'')}">
-            <button ng-click="pageIndex('next')">下一页</button>
-            <span>共{{allPage}}页</span>
+        <div class="footer" ng-show="allPage>1">
+            <span>总页数：</span><span ng-bind="allPage"></span>
+            <button ng-click="pageIndex('pre')" ng-disabled="search.indexpage==1" class="pre-button">&lt;</button>
+            <span ng-bind="search.indexpage+'/'+allPage"></span>
+            <button ng-click="pageIndex('next')" ng-disabled="search.indexpage==allPage">&gt;</button>
         </div>
     </div>
 </div>

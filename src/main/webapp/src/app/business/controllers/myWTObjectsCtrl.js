@@ -57,6 +57,9 @@ myWTObjectsModule.controller('myWTObjectsCtrl', ['$scope', 'userService', 'windc
             if (!$scope.inNumber && !$scope.inName) {
                 return;
             }
+            if (!$scope.inSearchPart && !$scope.inSearchDoc) {
+                return;
+            }
             queryList($scope.search);
         };
         $scope.pageIndex = function (val) {
@@ -66,7 +69,7 @@ myWTObjectsModule.controller('myWTObjectsCtrl', ['$scope', 'userService', 'windc
             if (val === "pre" && $scope.search.indexpage > 1) {
                 $scope.search.indexpage--;
                 queryList($scope.search);
-            } else if (val === "next") {
+            } else if (val === "next" && $scope.search.indexpage < $scope.allPage) {
                 $scope.search.indexpage++;
                 queryList($scope.search);
             }
