@@ -1,6 +1,9 @@
-'use strict';
-angular.module('windchillApp', ['ui.router'])
-    .config(['$stateProvider', '$urlRouterProvider',
+define([
+    // "app/business/controllers/recentlyVisitedCtrl"
+], function () {
+    'use strict';
+    var businessRouter = angular.module('windchillApp', ['ui.router']);
+    businessRouter.config(['$stateProvider', '$urlRouterProvider',
         function ($stateProvider, $urlRouterProvider) {
             $stateProvider
                 .state("recentlyVisited", {
@@ -41,3 +44,5 @@ angular.module('windchillApp', ['ui.router'])
             $urlRouterProvider.otherwise('/recentlyVisited');
             window.isdev = true;
         }]);
+    return businessRouter;
+});
