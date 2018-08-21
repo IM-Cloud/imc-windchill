@@ -1,8 +1,4 @@
-define([
-    "app/business/businessRouter",
-    "app/business/services/userService",
-    "app/business/services/windchillService"
-],function () {
+define([], function () {
     "use strict";
     var myCheckOutModule = angular.module('windchillApp');
     myCheckOutModule.controller('myCheckOutCtrl', ['$scope', 'userService', 'windchillService',

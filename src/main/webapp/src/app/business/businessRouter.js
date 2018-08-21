@@ -1,6 +1,4 @@
-define([
-    // "app/business/controllers/recentlyVisitedCtrl"
-], function () {
+define([], function () {
     'use strict';
     var businessRouter = angular.module('windchillApp', ['ui.router']);
     businessRouter.config(['$stateProvider', '$urlRouterProvider',

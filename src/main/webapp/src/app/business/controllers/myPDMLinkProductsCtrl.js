@@ -1,8 +1,4 @@
-define([
-    "app/business/businessRouter",
-    "app/business/services/userService",
-    "app/business/services/windchillService"
-],function () {
+define([], function () {
     "use strict";
     var myPDMLinkProductsModule = angular.module('windchillApp');
     myPDMLinkProductsModule.controller('myPDMLinkProductsCtrl', ['$scope', 'userService', 'windchillService',

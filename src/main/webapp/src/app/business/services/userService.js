@@ -1,9 +1,9 @@
 define([
     "app/business/businessRouter"
-],function () {
+], function () {
     'use strict';
-    var userService=angular.module('windchillApp');
-        userService.service('userService', ['$http', function ($http) {
+    var userService = angular.module('windchillApp');
+    userService.service('userService', ['$http', function ($http) {
         this.userUrl = window.configData.appPath + "/user/me";
         this.getUserInformation = function () {
             return $http.get(this.userUrl)

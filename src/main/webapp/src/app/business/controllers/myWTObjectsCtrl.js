@@ -1,8 +1,4 @@
-define([
-    "app/business/businessRouter",
-    "app/business/services/userService",
-    "app/business/services/windchillService"
-],function () {
+define([], function () {
     "use strict";
     var myWTObjectsModule = angular.module('windchillApp');
     myWTObjectsModule.controller('myWTObjectsCtrl', ['$scope', 'userService', 'windchillService',

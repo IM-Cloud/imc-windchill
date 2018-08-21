@@ -1,8 +1,4 @@
-define([
-    "app/business/businessRouter",
-    "app/business/services/userService",
-    "app/business/services/windchillService"
-],function () {
+define([], function () {
     "use strict";
     var myPDMLinkProductsModule = angular.module('windchillApp');
     myPDMLinkProductsModule.controller('recentlyVisitedCtrl', ['$scope', '$http', 'userService', 'windchillService',
@@ -12,7 +8,7 @@ define([
             };
             $scope.tableHead = {
                 prdName: '名称',
-                modifytime: '上次修改时间',
+                modifytime: '修改时间',
                 state: '状态',
                 container: '上下文',
                 version: '版本'
