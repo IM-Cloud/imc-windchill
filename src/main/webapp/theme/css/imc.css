@@ -137,6 +137,10 @@ table tbody tr:hover {
     margin-left: 22px;
 }
 
+div.footer {
+    margin-top: 10px;
+}
+
 #my-WT-object div.footer button {
     border: none;
     background-color: #FFF;
@@ -154,7 +158,7 @@ table tbody tr:hover {
     color: #3787D0;
 }
 
-#history-cal-tasks div.footer button.pre-button,#my-WT-object div.footer button.pre-button {
+#history-cal-tasks div.footer button.pre-button, #my-WT-object div.footer button.pre-button {
     margin-left: 15px;
 }
 
