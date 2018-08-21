@@ -37,7 +37,10 @@
                 <th class="col-sm-2" ng-bind="tableHead.name"></th>
                 <th class="col-sm-2" ng-bind="tableHead.version"></th>
                 <th class="col-sm-2" ng-bind="tableHead.state"></th>
-                <th class="col-sm-2" ng-bind="tableHead.container"></th>
+                <th class="col-sm-2">
+                    <span ng-bind="tableHead.container"></span>
+                    <i class="glyphicon glyphicon-question-sign" title="文件存储目录"></i>
+                </th>
                 <th class="col-sm-2" ng-bind="tableHead.modifytime"></th>
             </tr>
             </thead>

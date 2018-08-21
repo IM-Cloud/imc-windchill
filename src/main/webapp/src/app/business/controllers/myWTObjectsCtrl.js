@@ -1,7 +1,7 @@
 define([], function () {
     "use strict";
     var myWTObjectsModule = angular.module('windchillApp');
-    myWTObjectsModule.controller('myWTObjectsCtrl', ['$scope', 'userService', 'windchillService',
+    myWTObjectsModule.register.controller('myWTObjectsCtrl', ['$scope', 'userService', 'windchillService',
         function ($scope, userService, windchillService) {
             $scope.header = {
                 label: '高级搜索'

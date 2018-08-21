@@ -2,20 +2,31 @@
 require.config({
     "baseUrl": "./",
     "paths": {
-        "angular": "lib/angular",
-        "ui-router": "lib/angular-ui",
-        "app": "src/app"
+        angular: "lib/angular/angular",
+        jquery: "lib/jquery-3.3.1.min",
+        uiRouter: "lib/angular-ui/angular-ui-router",
+        translate: "lib/angular/angular-translate",
+        bootstrap: "lib/bootstrap-3.3.7-dist/js/bootstrap.min",
+        app: "src/app"
+    },
+    waitSeconds: 7,  //出现网络慢加载文件慢的时候  设置最长等待时间7s
+    shim: {  //这里shim等于快速定义一个模块，定义模块需要的依赖
+        'angular': {
+            exports: 'angular'
+        },
+        uiRouter: {
+            deps: ['angular']   //依赖什么模块
+        },
+        translate: {
+            deps: ['angular']
+        },
+        bootstrap: {
+            deps: ['jquery']
+        }
     }
 });
-require(["app/business/services/userService", "app/business/services/windchillService", "app/business/businessRouter"], function (app) {
-    require(["app/business/controllers/recentlyVisitedCtrl",
-        "app/business/controllers/myPDMLinkProductsCtrl",
-        "app/business/controllers/myWTObjectsCtrl",
-        "app/business/controllers/myCheckOutCtrl",
-        "app/business/controllers/toDoTasksCtrl",
-        "app/business/controllers/historicalTasksCtrl",
-        "app/business/controllers/myUpdatesCtrl"], function () {
-        angular.bootstrap($("html"), [app.name])
-    })
+require(["jquery", "angular", "uiRouter"], function () {
+    require(["app/business/businessRouter"], function (app) {
+        angular.bootstrap($("html"), [app.name]);
+    });
 });
-

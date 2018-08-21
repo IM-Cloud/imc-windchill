@@ -1,7 +1,9 @@
-define([], function () {
+define([
+    "app/business/businessRouter"
+], function () {
     "use strict";
     var myPDMLinkProductsModule = angular.module('windchillApp');
-    myPDMLinkProductsModule.controller('recentlyVisitedCtrl', ['$scope', '$http', 'userService', 'windchillService',
+    myPDMLinkProductsModule.register.controller('recentlyVisitedCtrl', ['$scope', '$http', 'userService', 'windchillService',
         function ($scope, $http, userService, windchillService) {
             $scope.header = {
                 label: '最近访问'

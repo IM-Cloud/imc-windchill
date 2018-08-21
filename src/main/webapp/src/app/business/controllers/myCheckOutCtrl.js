@@ -1,7 +1,7 @@
 define([], function () {
     "use strict";
     var myCheckOutModule = angular.module('windchillApp');
-    myCheckOutModule.controller('myCheckOutCtrl', ['$scope', 'userService', 'windchillService',
+    myCheckOutModule.register.controller('myCheckOutCtrl', ['$scope', 'userService', 'windchillService',
         function ($scope, userService, windchillService) {
             $scope.header = {
                 label: '我的检出'

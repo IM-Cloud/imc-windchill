@@ -1,7 +1,7 @@
 define([], function () {
     "use strict";
     var myPDMLinkProductsModule = angular.module('windchillApp');
-    myPDMLinkProductsModule.controller('myPDMLinkProductsCtrl', ['$scope', 'userService', 'windchillService',
+    myPDMLinkProductsModule.register.controller('myPDMLinkProductsCtrl', ['$scope', 'userService', 'windchillService',
         function ($scope, userService, windchillService) {
             $scope.header = {
                 label: '浏览产品库'

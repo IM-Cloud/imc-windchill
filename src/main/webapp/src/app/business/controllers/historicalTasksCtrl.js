@@ -1,7 +1,7 @@
 define([], function () {
     "use strict";
     var historicalTasksModule = angular.module('windchillApp');
-    historicalTasksModule.controller('historicalTasksCtrl', ['$scope', 'userService', 'windchillService',
+    historicalTasksModule.register.controller('historicalTasksCtrl', ['$scope', 'userService', 'windchillService',
         function ($scope, userService, windchillService) {
             $scope.header = {
                 label: '我的已办'
