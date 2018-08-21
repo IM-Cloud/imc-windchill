@@ -26,120 +26,120 @@ define([
                             }]
                     }
                 })
-               .state("myPDMLinkProducts", {
-                   url: '/myPDMLinkProducts',
-                   templateUrl: 'src/app/business/views/myPDMLinkProducts.html',
-                   controller: 'myPDMLinkProductsCtrl',
-                   resolve: {
-                       loadCtrl: ['$q',
-                           function ($q) {
-                               var deferred = $q.defer();
-                               require([
-                                   "src/app/business/controllers/myPDMLinkProductsCtrl.js",
-                                   "app/business/services/userService",
-                                   "app/business/services/windchillService"
-                               ], function () {
-                                   deferred.resolve();
-                               });
-                               return deferred.promise;
-                           }]
-                   }
-               })
-               .state("myWTObjects", {
-                   url: '/myWTObjects',
-                   templateUrl: 'src/app/business/views/myWTObjects.html',
-                   controller: 'myWTObjectsCtrl',
-                   resolve: {
-                       loadCtrl: ['$q',
-                           function ($q) {
-                               var deferred = $q.defer();
-                               require([
-                                   "src/app/business/controllers/myWTObjectsCtrl.js",
-                                   "app/business/services/userService",
-                                   "app/business/services/windchillService"
-                               ], function () {
-                                   deferred.resolve();
-                               });
-                               return deferred.promise;
-                           }]
-                   }
-               })
-               .state("myCheckOut", {
-                   url: '/myCheckOut',
-                   templateUrl: 'src/app/business/views/myCheckOut.html',
-                   controller: 'myCheckOutCtrl',
-                   resolve: {
-                       loadCtrl: ['$q',
-                           function ($q) {
-                               var deferred = $q.defer();
-                               require([
-                                   "src/app/business/controllers/myCheckOutCtrl.js",
-                                   "app/business/services/userService",
-                                   "app/business/services/windchillService"
-                               ], function () {
-                                   deferred.resolve();
-                               });
-                               return deferred.promise;
-                           }]
-                   }
-               })
-               .state("toDoTasks", {
-                   url: '/toDoTasks',
-                   templateUrl: 'src/app/business/views/toDoTasks.html',
-                   controller: 'toDoTasksCtrl',
-                   resolve: {
-                       loadCtrl: ['$q',
-                           function ($q) {
-                               var deferred = $q.defer();
-                               require([
-                                   "src/app/business/controllers/toDoTasksCtrl.js",
-                                   "app/business/services/userService",
-                                   "app/business/services/windchillService"
-                               ], function () {
-                                   deferred.resolve();
-                               });
-                               return deferred.promise;
-                           }]
-                   }
-               })
-               .state("historicalTasks", {
-                   url: '/historicalTasks',
-                   templateUrl: 'src/app/business/views/historicalTasks.html',
-                   controller: 'historicalTasksCtrl',
-                   resolve: {
-                       loadCtrl: ['$q',
-                           function ($q) {
-                               var deferred = $q.defer();
-                               require([
-                                   "src/app/business/controllers/historicalTasksCtrl.js",
-                                   "app/business/services/userService",
-                                   "app/business/services/windchillService"
-                               ], function () {
-                                   deferred.resolve();
-                               });
-                               return deferred.promise;
-                           }]
-                   }
-               })
-               .state("myUpdates", {
-                   url: '/myUpdates',
-                   templateUrl: 'src/app/business/views/myUpdates.html',
-                   controller: 'myUpdatesCtrl',
-                   resolve: {
-                       loadCtrl: ['$q',
-                           function ($q) {
-                               var deferred = $q.defer();
-                               require([
-                                   "src/app/business/controllers/myUpdatesCtrl.js",
-                                   "app/business/services/userService",
-                                   "app/business/services/windchillService"
-                               ], function () {
-                                   deferred.resolve();
-                               });
-                               return deferred.promise;
-                           }]
-                   }
-               });
+                .state("myPDMLinkProducts", {
+                    url: '/myPDMLinkProducts',
+                    templateUrl: 'src/app/business/views/myPDMLinkProducts.html',
+                    controller: 'myPDMLinkProductsCtrl',
+                    resolve: {
+                        loadCtrl: ['$q',
+                            function ($q) {
+                                var deferred = $q.defer();
+                                require([
+                                    "src/app/business/controllers/myPDMLinkProductsCtrl.js",
+                                    "app/business/services/userService",
+                                    "app/business/services/windchillService"
+                                ], function () {
+                                    deferred.resolve();
+                                });
+                                return deferred.promise;
+                            }]
+                    }
+                })
+                .state("myWTObjects", {
+                    url: '/myWTObjects',
+                    templateUrl: 'src/app/business/views/myWTObjects.html',
+                    controller: 'myWTObjectsCtrl',
+                    resolve: {
+                        loadCtrl: ['$q',
+                            function ($q) {
+                                var deferred = $q.defer();
+                                require([
+                                    "src/app/business/controllers/myWTObjectsCtrl.js",
+                                    "app/business/services/userService",
+                                    "app/business/services/windchillService"
+                                ], function () {
+                                    deferred.resolve();
+                                });
+                                return deferred.promise;
+                            }]
+                    }
+                })
+                .state("myCheckOut", {
+                    url: '/myCheckOut',
+                    templateUrl: 'src/app/business/views/myCheckOut.html',
+                    controller: 'myCheckOutCtrl',
+                    resolve: {
+                        loadCtrl: ['$q',
+                            function ($q) {
+                                var deferred = $q.defer();
+                                require([
+                                    "src/app/business/controllers/myCheckOutCtrl.js",
+                                    "app/business/services/userService",
+                                    "app/business/services/windchillService"
+                                ], function () {
+                                    deferred.resolve();
+                                });
+                                return deferred.promise;
+                            }]
+                    }
+                })
+                .state("toDoTasks", {
+                    url: '/toDoTasks',
+                    templateUrl: 'src/app/business/views/toDoTasks.html',
+                    controller: 'toDoTasksCtrl',
+                    resolve: {
+                        loadCtrl: ['$q',
+                            function ($q) {
+                                var deferred = $q.defer();
+                                require([
+                                    "src/app/business/controllers/toDoTasksCtrl.js",
+                                    "app/business/services/userService",
+                                    "app/business/services/windchillService"
+                                ], function () {
+                                    deferred.resolve();
+                                });
+                                return deferred.promise;
+                            }]
+                    }
+                })
+                .state("historicalTasks", {
+                    url: '/historicalTasks',
+                    templateUrl: 'src/app/business/views/historicalTasks.html',
+                    controller: 'historicalTasksCtrl',
+                    resolve: {
+                        loadCtrl: ['$q',
+                            function ($q) {
+                                var deferred = $q.defer();
+                                require([
+                                    "src/app/business/controllers/historicalTasksCtrl.js",
+                                    "app/business/services/userService",
+                                    "app/business/services/windchillService"
+                                ], function () {
+                                    deferred.resolve();
+                                });
+                                return deferred.promise;
+                            }]
+                    }
+                })
+                .state("myUpdates", {
+                    url: '/myUpdates',
+                    templateUrl: 'src/app/business/views/myUpdates.html',
+                    controller: 'myUpdatesCtrl',
+                    resolve: {
+                        loadCtrl: ['$q',
+                            function ($q) {
+                                var deferred = $q.defer();
+                                require([
+                                    "src/app/business/controllers/myUpdatesCtrl.js",
+                                    "app/business/services/userService",
+                                    "app/business/services/windchillService"
+                                ], function () {
+                                    deferred.resolve();
+                                });
+                                return deferred.promise;
+                            }]
+                    }
+                });
             $urlRouterProvider.otherwise('/recentlyVisited');
             window.isdev = true;
         }]);
