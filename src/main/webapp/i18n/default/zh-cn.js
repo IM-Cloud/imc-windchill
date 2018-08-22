@@ -18,6 +18,13 @@ define([], function () {
         "table_head_role": "角色",
         "table_head_number": "编号",
         "table_head_create_people": "创建人",
+        "table_head_type": "类型",
+        "search_parts": "部件",
+        "search_img_text": "图文档",
+        "search_button": "搜索",
+        "search_revert": "重置",
+        "search_result": "搜索结果",
+        "search_page_all": "总页数："
     };
     return i18n;
 });

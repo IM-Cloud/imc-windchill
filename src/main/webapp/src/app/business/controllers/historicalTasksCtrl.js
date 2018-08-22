@@ -9,6 +9,7 @@ define([
                 label: i18n.history_cal_tasks_label
             };
             $scope.title_tips = i18n.table_head_file_storage_catalog;
+            $scope.pageA=i18n.search_page_all
             $scope.tableHead = {
                 workitemName: i18n.table_head_name,
                 themeName: i18n.table_head_theme_name,

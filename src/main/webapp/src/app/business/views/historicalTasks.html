@@ -33,7 +33,7 @@
             </tbody>
         </table>
         <div class="footer" ng-show="allPage>1">
-            <span>总页数：</span><span ng-bind="allPage"></span>
+            <span>{{pageA}}</span><span ng-bind="allPage"></span>
             <button ng-click="pageIndex('pre')" ng-disabled="indexpage==1" class="pre-button">&lt;</button>
             <span ng-bind="indexpage+'/'+allPage"></span>
             <button ng-click="pageIndex('next')" ng-disabled="indexpage==allPage">&gt;</button>
