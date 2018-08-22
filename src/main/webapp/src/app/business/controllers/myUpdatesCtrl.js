@@ -1,7 +1,7 @@
 define([], function () {
     "use strict";
     var myUpdatesModule = angular.module('windchillApp');
-    myUpdatesModule.controller('myUpdatesCtrl', ['$scope', 'userService', 'windchillService',
+    myUpdatesModule.register.controller('myUpdatesCtrl', ['$scope', 'userService', 'windchillService',
         function ($scope, userService, windchillService) {
             $scope.header = {
                 label: '我的更新'
@@ -9,7 +9,7 @@ define([], function () {
             $scope.tableHead = {
                 number: "编号",
                 name: "名称",
-                modifytime: "上次修改时间",
+                modifytime: "修改时间",
                 container: "上下文",
                 state: "状态",
                 version: "版本"

@@ -3,7 +3,7 @@ define([
 ], function () {
     'use strict';
     var userService = angular.module('windchillApp');
-    userService.service('userService', ['$http', function ($http) {
+    userService.register.service('userService', ['$http', function ($http) {
         this.userUrl = window.configData.appPath + "/user/me";
         this.getUserInformation = function () {
             return $http.get(this.userUrl)

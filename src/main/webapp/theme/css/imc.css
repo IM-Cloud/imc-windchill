@@ -64,6 +64,17 @@ table thead tr th {
     white-space: nowrap;
 }
 
+table thead tr th.gly-position {
+    position: relative;
+}
+
+table thead tr th.gly-position i {
+    color: #3399FF;
+    font-size: 18px;
+    position: absolute;
+    margin: 10px 0 0 8px;
+}
+
 table tbody tr th {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;

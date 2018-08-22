@@ -2,7 +2,7 @@ define([
     "app/business/businessRouter",
 ], function () {
     'use strict';
-    return angular.module('windchillApp').service('windchillService', ['$http', function ($http) {
+    return angular.module('windchillApp').register.service('windchillService', ['$http', function ($http) {
         this.recentlyVisitedUrl = window.configData.appPath + '/windchill/recentlyVisited';
         this.myPDMLinkProductsUrl = window.configData.appPath + "/windchill/myPDMLinkProducts";
         this.myCheckOutUrl = window.configData.appPath + "/windchill/myCheckOut";

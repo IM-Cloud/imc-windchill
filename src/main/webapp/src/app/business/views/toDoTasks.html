@@ -8,7 +8,10 @@
             <th class="col-sm-2" ng-bind="tableHead.workitemName"></th>
             <th class="col-sm-2" ng-bind="tableHead.themeName"></th>
             <th class="col-sm-2" ng-bind="tableHead.objectState"></th>
-            <th class="col-sm-2" ng-bind="tableHead.objectContainer"></th>
+            <th class="col-sm-2 gly-position">
+                <span ng-bind="tableHead.objectContainer"></span>
+                <i class="glyphicon glyphicon-question-sign" title="文件存储目录"></i>
+            </th>
             <th class="col-sm-2" ng-bind="tableHead.objectTime"></th>
             <th class="col-sm-2" ng-bind="tableHead.role"></th>
         </tr>

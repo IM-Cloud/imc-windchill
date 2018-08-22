@@ -1,7 +1,7 @@
 define([], function () {
     "use strict";
     var toDoTasksModule = angular.module('windchillApp');
-    toDoTasksModule.controller('toDoTasksCtrl', ['$scope', 'userService', 'windchillService',
+    toDoTasksModule.register.controller('toDoTasksCtrl', ['$scope', 'userService', 'windchillService',
         function ($scope, userService, windchillService) {
             $scope.header = {
                 label: '我的待办'
