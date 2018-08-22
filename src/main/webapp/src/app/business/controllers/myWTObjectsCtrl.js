@@ -1,18 +1,20 @@
-define([], function () {
+define([
+    "language"
+], function (i18n) {
     "use strict";
     var myWTObjectsModule = angular.module('windchillApp');
     myWTObjectsModule.register.controller('myWTObjectsCtrl', ['$scope', 'userService', 'windchillService',
         function ($scope, userService, windchillService) {
             $scope.header = {
-                label: '高级搜索'
+                label: i18n.my_wt_objects_lable
             };
             $scope.tableHead = {
-                number: '编号',
-                name: '名称',
-                modifytime: "修改时间",
-                container: "上下文",
-                state: "状态",
-                version: "版本"
+                number: i18n.table_head_number,
+                name: i18n.table_head_name,
+                modifytime: i18n.table_head_edit_time,
+                container: i18n.table_head_container,
+                state: i18n.table_head_state,
+                version: i18n.table_head_version
             };
             $scope.tableBody = [];
             $scope.inNumber = undefined;

@@ -1,15 +1,17 @@
-define([], function () {
+define([
+    "language"
+], function (i18n) {
     "use strict";
     var myPDMLinkProductsModule = angular.module('windchillApp');
     myPDMLinkProductsModule.register.controller('myPDMLinkProductsCtrl', ['$scope', 'userService', 'windchillService',
         function ($scope, userService, windchillService) {
             $scope.header = {
-                label: '浏览产品库'
+                label: i18n.my_pdm_link_products_label
             };
             $scope.tableHead = {
-                container: '名称',
-                creator: '创建人',
-                createtime: "创建时间"
+                container: i18n.table_head_name,
+                creator: i18n.table_head_create_people,
+                createtime: i18n.table_head_create_time
             };
             $scope.tableBody = [
                 /* {

@@ -1,18 +1,20 @@
-define([], function () {
+define([
+    "language"
+], function (i18n) {
     "use strict";
     var toDoTasksModule = angular.module('windchillApp');
     toDoTasksModule.register.controller('toDoTasksCtrl', ['$scope', 'userService', 'windchillService',
         function ($scope, userService, windchillService) {
             $scope.header = {
-                label: '我的待办'
+                label: i18n.to_do_tasks_label
             };
             $scope.tableHead = {
-                workitemName: "名称",
-                themeName: "主题",
-                objectState: "状态",
-                objectContainer: "上下文",
-                objectTime: "创建时间",
-                role: "角色"
+                workitemName: i18n.table_head_name,
+                themeName: i18n.table_head_theme_name,
+                objectState: i18n.table_head_state,
+                objectContainer: i18n.table_head_container,
+                objectTime: i18n.table_head_create_time,
+                role: i18n.table_head_role
             };
             $scope.tableBody = [
                 /* {
