@@ -6,30 +6,30 @@
         <form>
             <div class="params-Information">
                 <label>
-                    编号:<input type="text" ng-model="inNumber">
+                    {{tableHead.number}}<input type="text" ng-model="inNumber">
                 </label>
             </div>
             <div class="params-Information">
                 <label>
-                    名称:<input type="text" ng-model="inName">
+                    {{tableHead.name}}<input type="text" ng-model="inName">
                 </label>
             </div>
             <div class="params-Information">
-                <b>类型:</b>
+                <b>{{pageText.type}}</b>
                 <label>
                     <input type="checkbox" value="searchPart" ng-model="inSearchPart"
-                           class="check-size"><span>部件</span>
+                           class="check-size"><span>{{pageText.parts}}</span>
                 </label>
                 <label>
-                    <input type="checkbox" value="searchDoc" ng-model="inSearchDoc" class="check-size"><span>图文档</span>
+                    <input type="checkbox" value="searchDoc" ng-model="inSearchDoc" class="check-size"><span>{{pageText.imgTxt}}</span>
                 </label>
             </div>
             <div class="form-btn">
-                <button ng-click="searchObject()">搜索</button>
-                <button type="reset" ng-click="revertSearch()">重置</button>
+                <button ng-click="searchObject()">{{pageText.search}}</button>
+                <button type="reset" ng-click="revertSearch()">{{pageText.revert}}</button>
             </div>
         </form>
-        <p>搜索结果</p>
+        <p>{{pageText.result}}</p>
         <table class="imc-table">
             <thead>
             <tr class="bg-info">
@@ -39,7 +39,7 @@
                 <th class="col-sm-2" ng-bind="tableHead.state"></th>
                 <th class="col-sm-2 gly-position">
                     <span ng-bind="tableHead.container"></span>
-                    <i class="glyphicon glyphicon-question-sign" title="{{title_tips}}"></i>
+                    <i class="glyphicon glyphicon-question-sign" title="{{pageText.title_tips}}"></i>
                 </th>
                 <th class="col-sm-2" ng-bind="tableHead.modifytime"></th>
             </tr>
@@ -61,7 +61,7 @@
             </tbody>
         </table>
         <div class="footer" ng-show="allPage>1">
-            <span>总页数：</span><span ng-bind="allPage"></span>
+            <span>{{pageText.pageAll}}</span><span ng-bind="allPage"></span>
             <button ng-click="pageIndex('pre')" ng-disabled="search.indexpage==1" class="pre-button">&lt;</button>
             <span ng-bind="search.indexpage+'/'+allPage"></span>
             <button ng-click="pageIndex('next')" ng-disabled="search.indexpage==allPage">&gt;</button>

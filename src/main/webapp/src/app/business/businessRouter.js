@@ -154,9 +154,7 @@ define([
     });
     businessRouter.config(['$translateProvider', function ($translateProvider) {
         $translateProvider.translations('en-us', i18n);
-
         $translateProvider.translations('zh-cn', i18n);
-
         $translateProvider.preferredLanguage(window.urlParams.lang);
     }]);
     return businessRouter;

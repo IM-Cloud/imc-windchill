@@ -18,6 +18,13 @@ define([], function () {
         "table_head_role": "Role",
         "table_head_number": "Number",
         "table_head_create_people": "Create people",
+        "table_head_type": "Type",
+        "search_parts": "Parts",
+        "search_img_text": "Image Text",
+        "search_button": "Search",
+        "search_revert": "Revert",
+        "search_result": "Search result",
+        "search_page_all": "Page all："
     };
     return i18n;
 });

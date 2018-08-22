@@ -7,7 +7,7 @@ if (!window.urlParams) {
 window.urlParams.lang = languageToken;
 
 function getDefaultLanguage() {
-    var locale = getLanguageFromUrl() || getLanguageFromCookie() || "en-us";
+    var locale = getLanguageFromUrl() || getLanguageFromCookie();
     if (!locale) {
         if (navigator.appName === 'Netscape') {
             locale = navigator.language;
@@ -17,10 +17,10 @@ function getDefaultLanguage() {
     }
     if (locale === 'zh-CN' || locale === 'zh-cn') {
         document.cookie = languageKey + '=' + encodeURIComponent('zh-CN');
-        return 'zh-CN';
+        return 'zh-cn';
     }
     document.cookie = languageKey + '=' + encodeURIComponent('en-US');
-    return 'en-US';
+    return 'en-us';
 }
 
 function getLanguageFromUrl() {
