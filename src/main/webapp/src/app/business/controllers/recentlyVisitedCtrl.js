@@ -8,7 +8,9 @@ define([
             $scope.header = {
                 label: i18n.recent_visit_label
             };
+            $scope.title_tips = i18n.table_head_file_storage_catalog;
             $scope.tableHead = {
+                number: i18n.table_head_number,
                 prdName: i18n.table_head_name,
                 modifytime: i18n.table_head_edit_time,
                 state: i18n.table_head_state,

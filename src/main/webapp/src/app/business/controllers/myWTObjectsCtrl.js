@@ -8,6 +8,7 @@ define([
             $scope.header = {
                 label: i18n.my_wt_objects_lable
             };
+            $scope.title_tips = i18n.table_head_file_storage_catalog;
             $scope.tableHead = {
                 number: i18n.table_head_number,
                 name: i18n.table_head_name,

@@ -8,6 +8,7 @@ define([
             $scope.header = {
                 label: i18n.to_do_tasks_label
             };
+            $scope.title_tips = i18n.table_head_file_storage_catalog;
             $scope.tableHead = {
                 workitemName: i18n.table_head_name,
                 themeName: i18n.table_head_theme_name,
