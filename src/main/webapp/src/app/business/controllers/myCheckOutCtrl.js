@@ -1,18 +1,21 @@
-define([], function () {
+define([
+    "language"
+], function (i18n) {
     "use strict";
     var myCheckOutModule = angular.module('windchillApp');
     myCheckOutModule.register.controller('myCheckOutCtrl', ['$scope', 'userService', 'windchillService',
         function ($scope, userService, windchillService) {
             $scope.header = {
-                label: '我的检出'
+                label: i18n.my_checkout_label
             };
+            $scope.title_tips = i18n.table_head_file_storage_catalog;
             $scope.tableHead = {
-                number: "编号",
-                name: "名称",
-                modifytime: "修改时间",
-                container: "上下文",
-                state: "状态",
-                version: "版本"
+                number: i18n.table_head_number,
+                name: i18n.table_head_name,
+                modifytime: i18n.table_head_edit_time,
+                container: i18n.table_head_container,
+                state: i18n.table_head_state,
+                version: i18n.table_head_version
             };
 
             $scope.tableBody = [

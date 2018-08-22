@@ -1,18 +1,21 @@
-define([], function () {
+define([
+    "language"
+], function (i18n) {
     "use strict";
     var historicalTasksModule = angular.module('windchillApp');
     historicalTasksModule.register.controller('historicalTasksCtrl', ['$scope', 'userService', 'windchillService',
         function ($scope, userService, windchillService) {
             $scope.header = {
-                label: '我的已办'
+                label: i18n.history_cal_tasks_label
             };
+            $scope.title_tips = i18n.table_head_file_storage_catalog;
             $scope.tableHead = {
-                workitemName: "名称",
-                themeName: "主题",
-                objectState: "状态",
-                objectContainer: "上下文",
-                objectTime: "创建时间",
-                role: "角色"
+                workitemName: i18n.table_head_name,
+                themeName: i18n.table_head_theme_name,
+                objectState: i18n.table_head_state,
+                objectContainer: i18n.table_head_container,
+                objectTime: i18n.table_head_create_time,
+                role: i18n.table_head_role
             };
             $scope.allPage = 1;
             $scope.indexpage = 1;

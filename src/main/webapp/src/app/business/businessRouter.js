@@ -1,9 +1,8 @@
 define([
-    "angular",
-    "uiRouter"
-], function () {
+    "language"
+], function (i18n) {
     'use strict';
-    var businessRouter = angular.module('windchillApp', ['ui.router']);
+    var businessRouter = angular.module('windchillApp', ['ui.router', 'pascalprecht.translate']);
     businessRouter.config(['$stateProvider', '$urlRouterProvider',
         function ($stateProvider, $urlRouterProvider) {
             $stateProvider
@@ -153,5 +152,12 @@ define([
             service: $provide.service
         };
     });
+    businessRouter.config(['$translateProvider', function ($translateProvider) {
+        $translateProvider.translations('en-us', i18n);
+
+        $translateProvider.translations('zh-cn', i18n);
+
+        $translateProvider.preferredLanguage(window.urlParams.lang);
+    }]);
     return businessRouter;
 });

@@ -1,19 +1,21 @@
 define([
-    "app/business/businessRouter"
-], function () {
+    "language"
+], function (i18n) {
     "use strict";
-    var myPDMLinkProductsModule = angular.module('windchillApp');
-    myPDMLinkProductsModule.register.controller('recentlyVisitedCtrl', ['$scope', '$http', 'userService', 'windchillService',
+    var recentlyVisitedModule = angular.module('windchillApp');
+    recentlyVisitedModule.register.controller('recentlyVisitedCtrl', ['$scope', '$http', 'userService', 'windchillService',
         function ($scope, $http, userService, windchillService) {
             $scope.header = {
-                label: '最近访问'
+                label: i18n.recent_visit_label
             };
+            $scope.title_tips = i18n.table_head_file_storage_catalog;
             $scope.tableHead = {
-                prdName: '名称',
-                modifytime: '修改时间',
-                state: '状态',
-                container: '上下文',
-                version: '版本'
+                number: i18n.table_head_number,
+                prdName: i18n.table_head_name,
+                modifytime: i18n.table_head_edit_time,
+                state: i18n.table_head_state,
+                container: i18n.table_head_container,
+                version: i18n.table_head_version
             };
             $scope.tableBody = [];
             $scope.params = {
@@ -40,5 +42,5 @@ define([
                 getUser();
             })();
         }]);
-    return myPDMLinkProductsModule;
+    return recentlyVisitedModule;
 });
