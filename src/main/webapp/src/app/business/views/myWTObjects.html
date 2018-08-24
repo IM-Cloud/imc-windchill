@@ -5,23 +5,21 @@
     <div id="my-WT-object">
         <form>
             <div class="params-Information">
-                <label>
-                    {{tableHead.number}}<input type="text" ng-model="inNumber">
-                </label>
+                <label class="wid-132">{{tableHead.number}}</label>
+                <input type="text" ng-model="inNumber">
             </div>
             <div class="params-Information">
-                <label>
-                    {{tableHead.name}}<input type="text" ng-model="inName">
-                </label>
+                <label class="wid-132">{{tableHead.name}}</label>
+                <input type="text" ng-model="inName">
             </div>
-            <div class="params-Information">
-                <b>{{pageText.type}}</b>
-                <label>
+            <div class="check-size">
+                <label class="">{{pageText.type}}</label>
+                <label class="">
                     <input type="checkbox" value="searchPart" ng-model="inSearchPart"
-                           class="check-size"><span>{{pageText.parts}}</span>
+                           class=""><span>{{pageText.parts}}</span>
                 </label>
-                <label>
-                    <input type="checkbox" value="searchDoc" ng-model="inSearchDoc" class="check-size"><span>{{pageText.imgTxt}}</span>
+                <label class="">
+                    <input type="checkbox" value="searchDoc" ng-model="inSearchDoc"><span>{{pageText.imgTxt}}</span>
                 </label>
             </div>
             <div class="form-btn">
