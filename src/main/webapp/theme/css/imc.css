@@ -69,7 +69,7 @@ table thead tr th.gly-position {
 }
 
 table thead tr th.gly-position i {
-    color: #3399FF;
+    color: #CCC;
     font-size: 18px;
     position: absolute;
     margin: 10px 0 0 8px;
@@ -117,24 +117,40 @@ table tbody tr:hover {
     font-weight: normal;
 }
 
-#my-WT-object form div.params-Information label input {
-    margin-left: 20px;
+#my-WT-object form div.params-Information label.wid-132 {
+    width: 70px;
 }
 
-#my-WT-object form div.params-Information label input.check-size {
+#my-WT-object form div.params-Information label.margin-15 {
+    margin-left: 18px;
+}
+
+#my-WT-object form div.check-size {
+    height: 40px;
+    line-height: 30px;
+}
+
+#my-WT-object form div.check-size label {
+    font-weight: normal;
+}
+
+#my-WT-object form div.check-size label:first-child {
+    width: 70px;
+}
+
+#my-WT-object form div.check-size label input {
     zoom: 140%;
-    margin: 0 0 0 10px;
     vertical-align: middle;
+    margin-top: 0;
+}
+
+#my-WT-object form div.check-size label:last-child {
+    margin-left: 15px;
 }
 
 #my-WT-object form div.params-Information label span {
     vertical-align: middle;
     margin-left: 5px;
-}
-
-#my-WT-object form div.params-Information b {
-    vertical-align: middle;
-    font-weight: normal;
 }
 
 #my-WT-object form div.form-btn button {
