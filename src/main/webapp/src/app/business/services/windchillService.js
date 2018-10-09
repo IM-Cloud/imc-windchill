@@ -9,7 +9,7 @@ define([
         this.myWTObjectsUrl = window.configData.appPath + "/windchill/myWTObjects";
         this.toDoTasksUrl = window.configData.appPath + "/windchill/toDoTasks";
         this.historicalTasksUrl = window.configData.appPath + "/windchill/historicalTasks";
-        this.myUpDatesUrl = window.configData.appPath + "/windchill/myUpDates";
+        this.myUpDatesUrl = window.configData.appPath + "/windchill/myUpdates";
         this.getRecentlyList = function (params) {
             var recentUrl = "";
             if (params) {
